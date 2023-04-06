@@ -20,7 +20,7 @@ return {
       { "<leader>ff", require("utils").find_files, desc = "Find Files" },
       { "<leader>fo", "<cmd>Telescope frecency theme=dropdown previewer=false<cr>", desc = "Recent" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-      { "<leader>fr", "<cmd>Telescope file_browser<cr>", desc = "Browser" },
+      { "<leader>fr", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", desc = "Browser" },
       { "<leader>ps", "<cmd>Telescope repo list<cr>", desc = "Search" },
       { "<leader>hs", "<cmd>Telescope help_tags<cr>", desc = "Search" },
       { "<leader>pp", function() require("telescope").extensions.project.project { display_type = "minimal" } end, desc = "List", },

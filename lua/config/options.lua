@@ -1,5 +1,10 @@
 local opt = vim.opt
 
+local prefix = vim.env.XDG_CONFIG_HOME or vim.fn.expand "~/.config"
+vim.opt.undodir = { prefix .. "/nvim/.undo//" }
+vim.opt.backupdir = { prefix .. "/nvim/.backup//" }
+vim.opt.directory = { prefix .. "/nvim/.swp//" }
+
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.shortmess:append { W = true, I = true, c = true }
 opt.breakindent = true

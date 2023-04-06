@@ -42,7 +42,7 @@ return {
         adapters = {
           require "neotest-python" {
             dap = { justMyCode = false },
-            runner = "unittest",
+            runner = "pytest",
           },
           require "neotest-plenary",
           require "neotest-vim-test" {
